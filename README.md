@@ -12,7 +12,7 @@ Installation is very simple
 ## Dependencies
  - **Placeholder API** 
 ## Configuration
-```json
+```white
 #    _____ _          _ _____  _
 #   |  __ (_)        | |  __ \| |
 #   | |__) |__  _____| | |__) | | __ _ _   _ ____

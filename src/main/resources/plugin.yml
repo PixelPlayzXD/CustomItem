@@ -1,0 +1,15 @@
+name: CustomItem
+version: '${project.version}'
+main: ga.pixelplayz.customitem.CustomItem
+prefix: §f§lCustomItem >>>
+load: STARTUP
+softdepend: [PlaceholderAPI]
+authors: [PixelPlayz]
+description: CustomItems On Joining With Executable Commands ON Right Click
+website: https://pixelplayz.ga
+commands:
+  customitemreload:
+    description: Completely Reload PixelPlayz Custom Item Plugin
+    permission: customitem.reload
+    permission-message: You Don't Have Permission
+    usage: /customitemreload

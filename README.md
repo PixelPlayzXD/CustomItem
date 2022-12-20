@@ -10,7 +10,7 @@ Installation is very simple
 - Drag And Drop The Plugin JAR File Inside Your **plugins** Folder
 
 ## Dependencies
- - **Placeholder API** - Soft Dependency (Optional)
+ - **Placeholder API** 
 ## Configuration
 ```
 #    _____ _          _ _____  _                 

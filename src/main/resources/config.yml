@@ -6,7 +6,7 @@
 #   |_|   |_/_/\_\___|_|_|    |_|\__,_|\__, /___|
 #                                       __/ |
 #                                      |___/
-# Use § instead of & for color code
+# Use & instead of & for color code
 
 world:
   enabled: "false" # If The Custom Item Is Given To A Player Joining a Specific World
@@ -21,10 +21,10 @@ item1:
   # eg: ACACIA_DOOR , COMPASS
   Item: "EMERALD" # Name Of The Item Without Space
   SlotNumber: 1 # Slot Number 1 - 9
-  ItemName: "§aSERVER SELECTOR" # Name you want to give the item
+  ItemName: "&aSERVER SELECTOR" # Name you want to give the item
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   # - "You Can Add More Lines Like This If You Want"
   Command: "say hi" # The Command To Be Executed Without " / "
 
@@ -33,10 +33,10 @@ item2:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 2
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -44,10 +44,10 @@ item3:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 3
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -55,10 +55,10 @@ item4:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 4
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -66,10 +66,10 @@ item5:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 5
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -77,10 +77,10 @@ item6:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 6
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -88,10 +88,10 @@ item7:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 7
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -99,10 +99,10 @@ item8:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 8
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"
 
 
@@ -110,8 +110,8 @@ item9:
   enabled: "false"
   Item: "EMERALD"
   SlotNumber: 9
-  ItemName: "§aSERVER SELECTOR"
+  ItemName: "&aSERVER SELECTOR"
   ItemLore:
-    - "§fClick To"
-    - "§lOpen"
+    - "&fClick To"
+    - "&lOpen"
   Command: "say hi"

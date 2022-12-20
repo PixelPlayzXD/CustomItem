@@ -2,6 +2,7 @@ package ga.pixelplayz.customitem;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -22,7 +23,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        System.out.println("§f§lCustomItem >>> §aPlugin Has Been Loaded");
+        System.out.println("§fCustomItem >>> §aPlugin Has Been Loaded");
         getConfig().options().copyDefaults();
         saveDefaultConfig();
         Bukkit.getPluginManager().registerEvents(this, this);
@@ -121,17 +122,19 @@ public final class CustomItem extends JavaPlugin implements Listener {
         String itemnumber = "item".concat(num);
         String Item = this.getConfig().getString(itemnumber.concat(".Item"));
         Item = Item.toUpperCase();
-        String ItemName = this.getConfig().getString(itemnumber.concat(".ItemName"));
+        String ItemName = ChatColor.translateAlternateColorCodes('&',this.getConfig().getString(itemnumber.concat(".ItemName")));
         ItemName = PlaceholderAPI.setPlaceholders(player,ItemName);
         List<String> LoreList = new ArrayList<String>();
         LoreList = this.getConfig().getStringList(itemnumber.concat(".ItemLore"));
+        for(int i=0;i<LoreList.size();i++){
+            LoreList.set(i,ChatColor.translateAlternateColorCodes('&',LoreList.get(i)));
+        }
         LoreList = PlaceholderAPI.setPlaceholders(player,LoreList);
         ItemStack ServerSelector = new ItemStack(Material.valueOf(Item));
         ItemMeta ServerSelectorMeta = ServerSelector.getItemMeta();
         ServerSelectorMeta.setDisplayName(ItemName);
         ServerSelectorMeta.setLore(LoreList);
         ServerSelector.setItemMeta(ServerSelectorMeta);
-
         return ServerSelector;
     }
 
@@ -310,6 +313,6 @@ public final class CustomItem extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
-        System.out.println("§f§lCustomItem >>> §cPlugin Has Been Disabled");
+        System.out.println("§fCustomItem >>> §cPlugin Has Been Disabled");
     }
 }

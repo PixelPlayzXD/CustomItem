@@ -4,6 +4,7 @@ import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -113,12 +114,21 @@ public final class CustomItem extends JavaPlugin implements Listener {
         if (command.getName().equals("customitemreload")) {
             reloadConfig();
             sender.sendMessage("§f§lCustomItem >>> §aConfig Reloaded");
+            World world = Bukkit.getWorld(this.getConfig().getString("world.name"));
+            for(int i = 1;i <= 10;i++){
+                String num = Integer.toString(i);
+                String itemnumber = "item".concat(num);
+                if(this.getConfig().getString(itemnumber.concat(".enabled")).equals("true")){
+                    for (Player player : Bukkit.getOnlinePlayers()){
+                        giveAllPlayerItem(player,world,getSelector(player,num));
+                    }
+                }
+            }
         }
         return true;
     }
 
-    public ItemStack getSelector(PlayerJoinEvent event,String num){
-        Player player = event.getPlayer();
+    public ItemStack getSelector(Player player,String num){
         String itemnumber = "item".concat(num);
         String Item = this.getConfig().getString(itemnumber.concat(".Item"));
         Item = Item.toUpperCase();
@@ -138,6 +148,13 @@ public final class CustomItem extends JavaPlugin implements Listener {
         return ServerSelector;
     }
 
+
+    public void giveAllPlayerItem(Player player, World world, ItemStack item) {
+        if (player.getWorld().equals(world)) {
+            player.getInventory().addItem(item);
+        }
+    }
+
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
@@ -149,7 +166,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"1"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"1"));
                         }
                     }, 20);
                 }
@@ -158,7 +175,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"2"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"2"));
                         }
                     }, 20);
                 }
@@ -167,7 +184,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"3"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"3"));
                         }
                     }, 20);
                 }
@@ -176,7 +193,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"4"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"4"));
                         }
                     }, 20);
                 }
@@ -185,7 +202,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"5"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"5"));
                         }
                     }, 20);
                 }
@@ -194,7 +211,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"6"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"6"));
                         }
                     }, 20);
                 }
@@ -203,7 +220,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"7"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"7"));
                         }
                     }, 20);
                 }
@@ -212,7 +229,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"8"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"8"));
                         }
                     }, 20);
                 }
@@ -221,7 +238,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                     int NewSlotNumber = SlotNumber-1;
                     Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                         public void run(){
-                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"9"));
+                            e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"9"));
                         }
                     }, 20);
                 }
@@ -232,7 +249,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"1"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"1"));
                     }
                 }, 20);
             }
@@ -241,7 +258,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"2"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"2"));
                     }
                 }, 20);
             }
@@ -250,7 +267,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"3"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"3"));
                     }
                 }, 20);
             }
@@ -259,7 +276,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"4"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"4"));
                     }
                 }, 20);
             }
@@ -268,7 +285,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"5"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"5"));
                     }
                 }, 20);
             }
@@ -277,7 +294,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"6"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"6"));
                     }
                 }, 20);
             }
@@ -286,7 +303,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"7"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"7"));
                     }
                 }, 20);
             }
@@ -295,7 +312,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"8"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"8"));
                     }
                 }, 20);
             }
@@ -304,7 +321,7 @@ public final class CustomItem extends JavaPlugin implements Listener {
                 int NewSlotNumber = SlotNumber-1;
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
                     public void run(){
-                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(e,"9"));
+                        e.getPlayer().getInventory().setItem(NewSlotNumber, getSelector(player,"9"));
                     }
                 }, 20);
             }

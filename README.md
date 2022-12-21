@@ -21,7 +21,6 @@ Installation is very simple
 #   |_|   |_/_/\_\___|_|_|    |_|\__,_|\__, /___|
 #                                       __/ |
 #                                      |___/
-# Use & instead of & for color code
 
 world:
   enabled: "false" # If The Custom Item Is Given To A Player Joining a Specific World

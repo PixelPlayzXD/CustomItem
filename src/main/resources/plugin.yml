@@ -8,8 +8,8 @@ authors: [PixelPlayz]
 description: CustomItems On Joining With Executable Commands ON Right Click
 website: https://pixelplayz.ga
 commands:
-  customitemreload:
-    description: Completely Reload PixelPlayz Custom Item Plugin
-    permission: customitem.reload
+  pixelplayz:
+    description: pixelplayz help for more info.
+    permission: customitem.pixelplayz
     permission-message: You Don't Have Permission
-    usage: /customitemreload
+    usage: /pixelplayz <subcommand>

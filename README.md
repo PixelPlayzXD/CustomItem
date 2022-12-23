@@ -1,4 +1,3 @@
-![PixelPlayz_App_Logo_Letter_C_Over_Minecraft_CustomItem_6b848c25-c7b8-4733-b083-064099226229](https://user-images.githubusercontent.com/91173848/209358419-a49bdd0a-ef96-4812-a49e-c5cac762c5c1.png)
 # PixelPlayz Custom Item
 
 A Minecraft Plugin For Giving A Player A Custom Item On Join Which Executes A Command On Right Click

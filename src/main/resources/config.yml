@@ -7,6 +7,11 @@
 #                                       __/ |
 #                                      |___/
 
+# Time after which you can run command again in milliseconds
+commandCooldown:
+  enabled: "true" # Keeping this enabled is recomended
+  cooldown: 1500 # 1500 milliseconds = 1.5 seconds (1 - 3 seconds recomended)
+
 world:
   enabled: "false" # If The Custom Item Is Given To A Player Joining a Specific World
   name: "world" # Name Of The World

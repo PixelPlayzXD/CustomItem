@@ -1,6 +1,7 @@
 package ga.pixelplayz.customitem;
 
-import ga.pixelplayz.customitem.commands.PixelPlayz;
+import ga.pixelplayz.customitem.commands.CustomItemCommand;
+import ga.pixelplayz.customitem.commands.subcommands.giveCommand;
 import ga.pixelplayz.customitem.commands.subcommands.giveallCommand;
 import ga.pixelplayz.customitem.commands.subcommands.reloadCommand;
 import ga.pixelplayz.customitem.listeners.PlayerJoinListener;
@@ -8,8 +9,6 @@ import ga.pixelplayz.customitem.listeners.RightClickListener;
 import ga.pixelplayz.customitem.miscellaneous.ItemGenerator;
 import ga.pixelplayz.customitem.miscellaneous.TabCompletion;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,8 +24,9 @@ public final class CustomItem extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(new ItemGenerator(this),this);
         Bukkit.getPluginManager().registerEvents(new reloadCommand(this),this);
         Bukkit.getPluginManager().registerEvents(new giveallCommand(this),this);
-        getCommand("pixelplayz").setExecutor(new PixelPlayz(this));
-        getCommand("pixelplayz").setTabCompleter(new TabCompletion());
+        Bukkit.getPluginManager().registerEvents(new giveCommand(this),this);
+        getCommand("customitem").setExecutor(new CustomItemCommand(this));
+        getCommand("customitem").setTabCompleter(new TabCompletion());
     }
 
     @Override

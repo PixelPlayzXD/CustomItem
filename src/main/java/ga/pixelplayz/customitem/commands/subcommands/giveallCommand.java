@@ -1,10 +1,8 @@
 package ga.pixelplayz.customitem.commands.subcommands;
 
-import ga.pixelplayz.customitem.CustomItem;
 import ga.pixelplayz.customitem.miscellaneous.ItemGenerator;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;

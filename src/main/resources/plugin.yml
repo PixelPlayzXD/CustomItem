@@ -8,8 +8,8 @@ authors: [PixelPlayz]
 description: CustomItems On Joining With Executable Commands ON Right Click
 website: https://pixelplayz.ga
 commands:
-  pixelplayz:
+  customitem:
     description: pixelplayz help for more info.
-    permission: customitem.pixelplayz
+    permission: customitem
     permission-message: You Don't Have Permission
     usage: /pixelplayz <subcommand>

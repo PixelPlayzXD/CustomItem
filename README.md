@@ -1,7 +1,10 @@
 # PixelPlayz Custom Item
 
-A Minecraft Plugin For 1.8.8 - 1.19.2 For Giving A Player A Custom Item On Join Which Executes A Command On Right Click
+A Minecraft Plugin For Giving A Player A Custom Item On Join Which Executes A Command On Right Click
 
+### Versions Supported
+
+1.8 - Current
 
 ## Installation
 

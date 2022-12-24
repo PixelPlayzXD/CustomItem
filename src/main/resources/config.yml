@@ -16,9 +16,7 @@ world:
   enabled: "false" # If The Custom Item Is Given To A Player Joining a Specific World
   name: "world" # Name Of The World
 
-
 # Maximum 9 Items Supported
-
 
 item1:
   enabled: "true"

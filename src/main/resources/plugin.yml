@@ -9,7 +9,7 @@ description: CustomItems On Joining With Executable Commands ON Right Click
 website: https://pixelplayz.ga
 commands:
   customitem:
-    description: pixelplayz help for more info.
+    description: /customitem help - to get more info.
     permission: customitem
     permission-message: You Don't Have Permission
     usage: /pixelplayz <subcommand>

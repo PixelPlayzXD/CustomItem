@@ -1,21 +1,27 @@
 # Custom Item
 
-A Minecraft Plugin For Giving A Player A Custom Item On Join Which Executes A Command On Right Click
+A Minecraft plugin for giving a player a custom item on join which executes a command on right click.
 
-### Versions Supported
+## Versions Supported
 
-1.8 - Current
+- Minecraft 1.8 and above
 
 ## Installation
 
-Installation is very simple
-
-- Drag And Drop The Plugin JAR File Inside Your **plugins** Folder
+1. Download the plugin JAR file.
+2. Drag and drop the JAR file into your **plugins** folder.
 
 ## Dependencies
- - **Placeholder API** 
+
+- **Placeholder API**
+
 ## Configuration
-```white
+
+Below is an example configuration file:
+
+```yaml
+# Custom Item Configuration
+# (Optional ASCII Art)
 #    _____ _          _ _____  _
 #   |  __ (_)        | |  __ \| |
 #   | |__) |__  _____| | |__) | | __ _ _   _ ____
@@ -26,25 +32,21 @@ Installation is very simple
 #                                      |___/
 
 world:
-  enabled: "false" # If The Custom Item Is Given To A Player Joining a Specific World
-  name: "world" # Name Of The World
+  enabled: "false"  # Enable if the custom item is given only for a specific world
+  name: "world"     # Name of the world
 
-
-# Maximum 9 Items Supported
-
+# Maximum 9 items supported
 
 item1:
   enabled: "true"
-  # eg: ACACIA_DOOR , COMPASS
-  Item: "EMERALD" # Name Of The Item Without Space
-  SlotNumber: 1 # Slot Number 1 - 9
-  ItemName: "&aSERVER SELECTOR" # Name you want to give the item
+  # Example items: ACACIA_DOOR, COMPASS, etc.
+  Item: "EMERALD"         # Name of the item (no spaces)
+  SlotNumber: 1           # Slot number (1-9)
+  ItemName: "&aSERVER SELECTOR"  # Display name for the item
   ItemLore:
     - "&fClick To"
     - "&lOpen"
-  # - "You Can Add More Lines Like This If You Want"
-  Command: "say hi" # The Command To Be Executed Without " / "
-
+  Command: "say hi"       # Command to execute (without the leading slash)
 
 item2:
   enabled: "false"
@@ -56,7 +58,6 @@ item2:
     - "&lOpen"
   Command: "say hi"
 
-
 item3:
   enabled: "false"
   Item: "EMERALD"
@@ -66,7 +67,6 @@ item3:
     - "&fClick To"
     - "&lOpen"
   Command: "say hi"
-
 
 item4:
   enabled: "false"
@@ -78,7 +78,6 @@ item4:
     - "&lOpen"
   Command: "say hi"
 
-
 item5:
   enabled: "false"
   Item: "EMERALD"
@@ -88,7 +87,6 @@ item5:
     - "&fClick To"
     - "&lOpen"
   Command: "say hi"
-
 
 item6:
   enabled: "false"
@@ -100,7 +98,6 @@ item6:
     - "&lOpen"
   Command: "say hi"
 
-
 item7:
   enabled: "false"
   Item: "EMERALD"
@@ -110,7 +107,6 @@ item7:
     - "&fClick To"
     - "&lOpen"
   Command: "say hi"
-
 
 item8:
   enabled: "false"
@@ -122,7 +118,6 @@ item8:
     - "&lOpen"
   Command: "say hi"
 
-
 item9:
   enabled: "false"
   Item: "EMERALD"
@@ -133,6 +128,8 @@ item9:
     - "&lOpen"
   Command: "say hi"
 ```
+
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+

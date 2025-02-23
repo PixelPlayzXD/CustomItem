@@ -21,7 +21,6 @@ Below is an example configuration file:
 
 ```yaml
 # Custom Item Configuration
-# (Optional ASCII Art)
 #    _____ _          _ _____  _
 #   |  __ (_)        | |  __ \| |
 #   | |__) |__  _____| | |__) | | __ _ _   _ ____

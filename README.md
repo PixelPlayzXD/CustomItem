@@ -1,4 +1,4 @@
-# PixelPlayz Custom Item
+# Custom Item
 
 A Minecraft Plugin For Giving A Player A Custom Item On Join Which Executes A Command On Right Click
 
